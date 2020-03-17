@@ -169,7 +169,7 @@ public class UriTemplate {
 		if (uri == null) {
 			return false;
 		}
-		Matcher matcher = this.matchPattern.matcher(uri);
+		Matcher matcher = this.matchPattern.matcher(uri.toLowerCase());
 		return matcher.matches();
 	}
 
