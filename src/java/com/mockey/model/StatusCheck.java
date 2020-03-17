@@ -225,7 +225,10 @@ public abstract class StatusCheck {
 
 		}
 		// Sort me.
-		Collections.sort(stringList, new StringComparator());
+		synchronized(stringList) {
+		
+			Collections.sort(stringList, new StringComparator());
+		}
 
 		return stringList;
 	}
